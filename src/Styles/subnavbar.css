@@ -1,0 +1,75 @@
+.sub-navbar{
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #1282a2;
+  width: 95vw;
+  height: 6vh;
+
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+    
+
+}
+#auth-btn{
+  width:12vw;
+  height:3.5vh;
+  background-color:#D9D9D9;
+  color: #000000d1;
+  border-radius: 100px;
+  border:none;
+  font-size: 0.9em;
+}
+.cart-icon{
+  color: #ffffff;
+  font-size: 3vw;
+  margin-right: 2.5rem;
+  cursor: pointer;
+}
+.rigth-ceva{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 13rem;
+  height: 7vh;
+  margin-right: 1rem;
+  
+}
+.menu{
+  color: #ffffff;
+  font-size: 2.2rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+.show{
+  text-decoration: none;
+  background-color: red;
+  position: absolute;
+  left:0;
+}
+.full{
+  width:100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.562);
+  position: absolute;
+  visibility: hidden; 
+  z-index:-100;  
+}
+.decoration{
+  text-decoration: none;
+}
+.cart{
+  width: 400px;
+  height: 100%;
+  position: absolute;
+  visibility: hidden;
+  right: 0;
+  top: 0;
+  background-color: black;
+  z-index: -100;
+  
+  
+}
+

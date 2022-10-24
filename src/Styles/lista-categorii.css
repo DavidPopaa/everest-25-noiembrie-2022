@@ -1,0 +1,51 @@
+.unhide{
+    position: absolute;
+    left: 0;
+    width: 20vw;
+    height: 100vh;
+    background-color: #1282a2;
+    flex-direction: column;
+    top: 13vh;
+    transition: 0.5s ease-out ;
+    z-index: 100;
+    bottom: 0;
+    color: white;
+    
+}
+
+.list-element{
+    margin: 6vh;
+    margin-left: 0;
+    list-style: none;
+    margin-top: 0;
+    
+    
+}
+.hide{
+    position: absolute;
+    right: 100vw;
+}
+.visibel{
+  visibility: visible;
+  z-index: 99;
+}
+.parent{
+    width: 15vw;
+    background-color: white;
+    height: 5vh;
+    color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 20px;
+    /* margin-left: 1px; */
+}
+.arrow-icon{
+    font-size: 1.5rem;
+    color: #034078;
+}
+.he{
+  visibility: visible;
+  z-index: 100;
+}
