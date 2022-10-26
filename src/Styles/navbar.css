@@ -1,65 +1,58 @@
 .navbar {
-    width: 100%;
-    /* overflow: hidden; */
-    height: 7vh;
-    background-color: #034078;
-    opacity: 58;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /* padding-left: 1.25rem; */
-    
-  }
-  .right {
-    background-image: url("../Images/Screenshot_2022-10-23_123824-removebg-preview.png");
-    background-size: cover;
-    height: 7vh;
-    min-width: 8vw;
-    margin-left: 2vw;
-  }
-  .center {
-    display: flex;
-    width: 16.67vw;
-    justify-content: space-between;
-    color: #ffffff;
-  }
-  .link{
-    /* text-decoration: underline; */
-    color: #ffffff;
-    text-decoration: none;
-  }
-  link:hover{
-    opacity: 50%;
-  }
-  .left {
-    display: flex;
-    justify-content: space-between;
-    width: 14vw;
-    margin-right: 2.5rem;
-  }
-  .account {
-    height: 5vh;
-    width: 5vh;
-    border-radius: 50%;
-    background-color: #ffffff;
-  }
-  .search {
-    height: 4.5vh;
-    width: 9vw;
-    background-image: linear-gradient(
-      92.17deg,
-      rgba(255, 255, 255, 0.4) 5.74%,
-      rgba(255, 255, 255, 0.1) 68.43%
-    );
-    backdrop-filter: blur(10px);
-    border-radius: 100px;
-    display: flex;
-    align-items: center;
-  
-  }
-  .search div{
-    color: #ffffff;
-    margin-left: 0.625rem;
-  
-  }
-  
+  width: 100%;
+  height: 4rem;
+  background-color: #034078;
+  opacity: 58;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.right {
+  background-image: url("../Images/Screenshot_2022-10-23_123824-removebg-preview.png");
+  background-size: cover;
+  height: 7vh;
+  min-width: 8vw;
+  margin-left: 2vw;
+}
+.center {
+  display: flex;
+  width: 16.67vw;
+  justify-content: space-between;
+  color: #ffffff;
+}
+.link {
+  color: #ffffff;
+  text-decoration: none;
+}
+link:hover {
+  opacity: 50%;
+}
+.left {
+  display: flex;
+  justify-content: flex-end;
+  width: 20rem;
+  margin-right: 2.5rem;
+}
+.navbar-user{
+  color: #ffffff;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+.search {
+  height: 4.5vh;
+  width: 9vw;
+  background-image: linear-gradient(
+    92.17deg,
+    rgba(255, 255, 255, 0.4) 5.74%,
+    rgba(255, 255, 255, 0.1) 68.43%
+  );
+  backdrop-filter: blur(10px);
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+}
+.search div {
+  color: #ffffff;
+  margin-left: 0.625rem;
+}

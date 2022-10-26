@@ -1,0 +1,9 @@
+.log {
+  background-color: bisque;
+  width: 100%;
+  height: 100vh;
+  animation: color-change-2x 2s linear infinite alternate both;
+  z-index: -1;
+  display: grid;
+  place-items: center;
+}

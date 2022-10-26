@@ -1,0 +1,97 @@
+.contact-container {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0);
+  padding-right: 25%;
+  padding-left: 25%;
+  padding-top: 20px;
+  box-sizing: border-box;
+  z-index: 0;
+}
+.contact-full {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  display: grid;
+  place-content: center;
+}
+.contact-logo{
+  width: 40vw;
+  height: 38vh;
+}
+.contact-title {
+  width: 100%;
+  font-size: 2rem;
+  text-align: center;
+  
+}
+.contact-forms-name {
+  width: 100%;
+  margin-top: 20px;
+}
+.contact-name,
+.contact-email,
+.contact-subject,
+.contact-textarea,
+.contact-button {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.contact-input {
+  border-radius: 5px;
+  background-color: rgba(128, 128, 128, 0.555);
+  width: 12rem;
+  height: 2rem;
+  border: none;
+  border-bottom: 2px solid black;
+}
+.contact-input:focus {
+  outline: none;
+}
+.contact-name {
+  display: flex;
+  justify-content: center;
+}
+.contact-text-area {
+  border-radius: 10px;
+  background-color: rgba(128, 128, 128, 0.555);
+  width: 32vw;
+  height: 35vh;
+  border: none;
+  border-bottom: 2px solid black;
+  font-size: 1.2rem;
+}
+.contact-text-area:focus {
+  outline: none;
+}
+.contact-lastname {
+  margin-left: 20px;
+}
+.contact-button {
+  border-radius: 100px;
+  width: 150px;
+  height: 35px;
+  background-color: rgba(128, 128, 128, 0.555);
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+  box-shadow: 0px 0px 21px -9px #000000;
+  margin-top: 40px;
+}
+.form-button:focus {
+  box-shadow: inset 0px 0px 21px -9px #000000;
+}
+
+/* vin imd */
+/* ok */

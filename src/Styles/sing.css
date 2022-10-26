@@ -1,0 +1,139 @@
+.sing {
+  background-color: bisque;
+  width: 100%;
+  height: 100vh;
+  animation: color-change-2x 2s linear infinite alternate both;
+  /* position: absolute;
+  top: -100px; */
+  z-index: -1;
+  display: grid;
+  place-items: center;
+}
+.form {
+  background-image: linear-gradient(
+    92.17deg,
+    rgba(255, 255, 255, 0.4) 5.74%,
+    rgba(255, 255, 255, 0.1) 68.43%
+  );
+  height: 30rem;
+  width: 35rem;
+  border-radius: 20px;
+  /* padding: 30px; */
+  box-sizing: border-box;
+  border: #0000003d 2px solid;
+}
+.form-title {
+  font-size: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+.one {
+  margin-bottom: 20px;
+}
+.two {
+  margin-bottom: 20px;
+}
+.three {
+  margin-left: 1vw;
+}
+.form-inputs {
+  margin-top: 20px;
+  width: 35rem;
+  display: grid;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.form-button {
+  border-radius: 100px;
+  width: 150px;
+  height: 35px;
+  background-color: rgba(255, 255, 255, 0.573);
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.form-input {
+  border-radius: 100px;
+  background-color: rgba(255, 255, 255, 0.573);
+  width: 12rem;
+  height: 2rem;
+  border: none;
+  border-bottom: 2px solid black;
+}
+.form-input:focus{
+  outline: none;
+
+}
+.form-password,
+.form-username {
+  opacity: 50%;
+  margin-left: 1.5vh;
+}
+.form-bars {
+  height: 60vh;
+  width: 100%;
+  z-index: -150;
+  position: absolute;
+  top: 0;
+  background-color: #b22cff;
+  animation: color-change-2x 2s linear infinite alternate both;
+}
+.form-button:focus {
+  box-shadow: inset 0px 0px 21px -9px #000000;
+}
+.four{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  
+}
+.form-bar-container {
+  width: 35rem;
+  height: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-bar {
+  width: 10rem;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.293);
+}
+.form-or {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  color: rgba(0, 0, 0, 0.368);
+}
+.form-square {
+  height: 3.5rem;
+  width: 3.5rem;
+  background-color: rgba(255, 255, 255, 0.499);
+  border-radius: 10px;
+  display: grid;
+  place-content: center;
+}
+.form-links {
+  width: 35rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.form-icon {
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.381);
+}
+.form-links-container {
+  width: 35rem;
+}
+
+@keyframes color-change-2x {
+  0% {
+    background: #19dcea;
+  }
+  100% {
+    background: #b22cff;
+  }
+}

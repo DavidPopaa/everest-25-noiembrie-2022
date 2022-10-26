@@ -1,103 +1,102 @@
-.big-div{
-    margin-top: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.big-div {
+  margin-top: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.grid-container{
-    display: grid;
-    grid-template-columns: 13.5rem 13.5rem 13.5rem;  
-    grid-template-rows: 6rem 6rem 6rem; 
-    column-gap:  9.25rem;
-    row-gap: 4.75rem;
-    margin-bottom: 14vh;
+.grid-container {
+  display: grid;
+  grid-template-columns: 13.5rem 13.5rem 13.5rem;
+  grid-template-rows: 6rem 6rem 6rem;
+  column-gap: 9.25rem;
+  row-gap: 4.75rem;
+  margin-bottom: 14vh;
 }
-.categories-div{
-    height: 8rem;
-    width: 12.3rem;
-    color: whitesmoke;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+.categories-div {
+  height: 8rem;
+  width: 12.3rem;
+  color: #ffffff;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.categories-div:hover{
-    animation: shadow-pop-tr 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+.categories-div:hover {
+  animation: shadow-pop-tr 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
 }
-.category-name{
-    font-size: 0.8rem;
+.category-name {
+  font-size: 0.8rem;
 }
-.text{
-    color: white;
+.text {
+  color: #ffffff;
 }
-.first{
-    background-image: url("../Images/categorii-jucarii.jpg");
-    filter: brightness(75%);
-    background-size: cover;
+.first {
+  background-image: url("../Images/categorii-jucarii.jpg");
+  filter: brightness(75%);
+  background-size: cover;
 }
-.second{
-    background-image: url("../Images/categorii-natura.jpg");
-    filter: brightness(75%);
-    background-size: cover;
+.second {
+  background-image: url("../Images/categorii-natura.jpg");
+  filter: brightness(75%);
+  background-size: cover;
 }
-.third{
-    background-image: url("../Images/categorii-papuci.jpg");
-    filter: brightness(75%);
-    background-size: cover;
+.third {
+  background-image: url("../Images/categorii-papuci.jpg");
+  filter: brightness(75%);
+  background-size: cover;
 }
-.forth{
-    background-image: url("../Images/categorii-tehnologie.jpg");
-    filter: brightness(75%);
-    background-size: cover;
+.forth {
+  background-image: url("../Images/categorii-tehnologie.jpg");
+  filter: brightness(75%);
+  background-size: cover;
 }
-.fivth{
-    background-image: url("../Images/categorii-ceasuri\ sau\ accesorii.jpg");
-    filter: brightness(75%);
-    background-size: cover;
+.fivth {
+  background-image: url("../Images/categorii-ceasuri\ sau\ accesorii.jpg");
+  filter: brightness(75%);
+  background-size: cover;
 }
-.sixth{
-    background-image: url("../Images/categorii-acasa.jpg");
-    filter: brightness(75%);
-    background-size: cover;
+.sixth {
+  background-image: url("../Images/categorii-acasa.jpg");
+  filter: brightness(75%);
+  background-size: cover;
 }
-.seventh{
-    background-image: url("../Images/categorii-haine.jpg");
-    filter: brightness(75%);
-    background-size: cover;
+.seventh {
+  background-image: url("../Images/categorii-haine.jpg");
+  filter: brightness(75%);
+  background-size: cover;
 }
-.eigth{
-    background-image: url("../Images/categorii-arta.jpg");
-    filter: brightness(75%);
-    background-size: cover;
+.eigth {
+  background-image: url("../Images/categorii-arta.jpg");
+  filter: brightness(75%);
+  background-size: cover;
 }
-.nine{
-    background-image: url("../Images/altele.jpg");
-    filter: brightness(75%);
-    background-size: cover;
+.nine {
+  background-image: url("../Images/altele.jpg");
+  filter: brightness(75%);
+  background-size: cover;
 }
-#categories-title{
-    color: #034078;
+#categories-title {
+  color: #034078;
 }
-.categories-title-div{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    
-    margin-bottom: 30%;
+.categories-title-div {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 30%;
 }
-
 @keyframes shadow-pop-tr {
-    0% {
-        box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
-        transform: translateX(0) translateY(0);
-    }
-    100% {
-        box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e, 8px -8px #3e3e3e;
-        transform: translateX(-8px) translateY(8px);
-    }
+  0% {
+    box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e,
+      0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e,
+      4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e,
+      8px -8px #3e3e3e;
+    transform: translateX(-8px) translateY(8px);
+  }
 }
-
