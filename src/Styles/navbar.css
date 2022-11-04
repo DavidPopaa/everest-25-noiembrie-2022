@@ -1,58 +1,53 @@
-.navbar {
-  width: 100%;
-  height: 4rem;
-  background-color: #034078;
-  opacity: 58;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.right {
-  background-image: url("../Images/Screenshot_2022-10-23_123824-removebg-preview.png");
-  background-size: cover;
-  height: 7vh;
-  min-width: 8vw;
-  margin-left: 2vw;
-}
-.center {
-  display: flex;
-  width: 16.67vw;
-  justify-content: space-between;
-  color: #ffffff;
-}
-.link {
-  color: #ffffff;
-  text-decoration: none;
-}
-link:hover {
-  opacity: 50%;
-}
-.left {
-  display: flex;
-  justify-content: flex-end;
-  width: 20rem;
-  margin-right: 2.5rem;
-}
-.navbar-user{
-  color: #ffffff;
-  margin-left: 10px;
-  display: flex;
-  align-items: center;
-}
-.search {
-  height: 4.5vh;
-  width: 9vw;
-  background-image: linear-gradient(
-    92.17deg,
-    rgba(255, 255, 255, 0.4) 5.74%,
-    rgba(255, 255, 255, 0.1) 68.43%
-  );
-  backdrop-filter: blur(10px);
+.navbar-container {
+  width: 90%;
+  height: 50px;
+  background-color: #ffffff;
   border-radius: 100px;
+  box-shadow: 10px 10px 90px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  top: 30px;
+  margin-left: 5%;
+  margin-right: 5%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  z-index: 100;
 }
-.search div {
-  color: #ffffff;
-  margin-left: 0.625rem;
+.navbar-left {
+  background-image: url(../Images/everest-logo.png);
+  background-size: cover;
+  height: 50px;
+  width: 120px;
+}
+.navbar-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px;
+  font-family: "Varela Round", sans-serif;
+  font-weight: 600;
+}
+.navbar-right {
+  display: flex;
+  align-items: center;
+  font-family: "Varela Round", sans-serif;
+  font-weight: 800;
+}
+.navbar-user {
+  color: rgb(250, 250, 250);
+  background-color: #326be5;
+  display: grid;
+  place-content: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-family: "Varela Round", sans-serif;
+  font-weight: 100 !important;
 }

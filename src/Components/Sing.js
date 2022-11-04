@@ -32,7 +32,6 @@ function Sing() {
     await signup(username, password)
     setUsername('')
     setPassword('')
-    
   };
   return (
     <div className="sing">
@@ -49,17 +48,19 @@ function Sing() {
               name="fname"
               className="form-input"
               value={username}
+              required
             ></input>
           </div>
           <div className="two">
             <div className="form-password">Parolă</div>
             <input
               onChange={(e) => setPassword(e.target.value)}
-              type="text"
+              type="password"
               id="lname"
               name="lname"
               className="form-input"
               value={password}
+              required
             ></input>
           </div>
           <div className="three">
@@ -68,6 +69,7 @@ function Sing() {
             </button>
           </div>
           {error && <div>{error}</div>}
+          fa sa putem vorbi
           <div className="four">
             <Link to="/Log" className="dec form-link-sing">Aveți deja un cont?</Link>
 

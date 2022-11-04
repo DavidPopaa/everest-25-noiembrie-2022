@@ -35,7 +35,7 @@ function Log() {
             <input
               onChange={(e) => setPassword(e.target.value)}
               value={password} 
-              type="text"
+              type="password"
               id="lname"
               name="lname"
               className="form-input"

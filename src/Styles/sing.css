@@ -3,8 +3,6 @@
   width: 100%;
   height: 100vh;
   animation: color-change-2x 2s linear infinite alternate both;
-  /* position: absolute;
-  top: -100px; */
   z-index: -1;
   display: grid;
   place-items: center;
@@ -18,7 +16,6 @@
   height: 30rem;
   width: 35rem;
   border-radius: 20px;
-  /* padding: 30px; */
   box-sizing: border-box;
   border: #0000003d 2px solid;
 }
@@ -53,6 +50,11 @@
   border: none;
   font-size: 1.2rem;
   cursor: pointer;
+}
+.form-button:hover{
+  border: 2px solid black;
+  background-color: #00000000;
+animation: contact-transition .5s ease-in both;
 }
 .form-input {
   border-radius: 100px;

@@ -15,8 +15,8 @@ function Footer() {
         </div>
       </div>
       <div className="bar"></div>
-      <div>
-        <div className="footer-style">contact@everest.com</div>
+      <div  className="footer-display">
+        <div className="footer-style">everestofficialcompany@gmail.com</div>
         <div className="footer-style">Copyright &copy; {data}</div>
         <div className="footer-style">All rights reserve.</div>
       </div>

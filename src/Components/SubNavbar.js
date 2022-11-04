@@ -6,18 +6,23 @@ import cartIcon from "@iconify/icons-dashicons/cart";
 import "../Styles/lista-categorii.css";
 import { Link } from "react-router-dom";
 import heavyMultiplicationX from "@iconify/icons-emojione-v1/heavy-multiplication-x";
-import plusOutlined from "@iconify/icons-ant-design/plus-outlined";
-import minusIcon from "@iconify/icons-akar-icons/minus";
-import { useLogout } from '../hooks/useLogout';
-import { useGetAuthContex } from '../hooks/useGetAuthContex';
+import { useLogout } from "../hooks/useLogout";
+import { useGetAuthContex } from "../hooks/useGetAuthContex";
+import { useSelector } from "react-redux";
+import CartItem from "./CartItem";
 
 const SubNavbar = () => {
-  const { user } = useGetAuthContex()
-
-  const { logout } = useLogout()
+  const cartItems = useSelector((state) => state.cart.itemsList);
+  let total = 0;
+  cartItems.forEach((item) => {
+    total += item.totalPrice;
+  });
+  const { user } = useGetAuthContex();
+  const totalQuantity = useSelector((state) => state.cart.totalQuantity);
+  const { logout } = useLogout();
   const handleLogout = () => {
-    logout()
-  }
+    logout();
+  };
 
   const [show, setShow] = useState("hide");
   let body = document.querySelector(".full");
@@ -55,64 +60,72 @@ const SubNavbar = () => {
       body.classList.remove("visibel");
     }
   };
-
+  //******************* */
+  // HTML
+  //******************* */
   return (
-    <div className="sub-navbar">
-      <div className="left-ceva">
-        <Icon icon={menuIcon} onClick={handeClick} className="menu" />
+    <div className="sub-container">
+      {/* ************************ */}
+      {/* SubNavbar */}
+      {/* ************************ */}
+      <div className="sub-left">
+        <Icon
+          icon="heroicons-solid:menu-alt-2"
+          onClick={handeClick}
+          className="sub-menu"
+        />
       </div>
-
-      <div className="rigth-ceva">
-        <Icon icon={cartIcon} className="cart-icon" onClick={drag} />
-        
-          {user && (
-            <div className="logout-btn-div">
-              <button onClick={handleLogout} className="logout-btn">
-                LOGOUT
-              </button>
-            </div>
-          )}
-        
-        {/* {!user && (<button id="auth-btn">
-          <Link to="/Sing" className="decoration">
-            Sing In
-          </Link>{" "}
-          /{" "}
-          <Link to="/Log" className="decoration">
-            Log In
-          </Link>
-        </button>)} */}
+      <div className="sub-right">
+        <Icon icon={cartIcon} className="sub-cart" onClick={drag} />
+        <h1>{totalQuantity}</h1>
       </div>
+      <div className="sub-cloud">
+        {user && (
+          <div className="sub-logout">
+            <button onClick={handleLogout} className="sub-logout-btn">
+              LOGOUT
+            </button>
+          </div>
+        )}
+      </div>
+      {/* ************************ */}
+      {/* Cart */}
+      {/* ************************ */}
       <div className="cart">
         <button onClick={undrag} className="close_button">
           <Icon icon={heavyMultiplicationX} />
         </button>
         <ul>
-          <il>
-            <div className="product_container">
-              <div className="product_image"></div>
-              <div className="product_sub_container">
-                <div className="product_name">Dacia Logan</div>
-                <div className="product_quantity">
-                  <div>
-                    <Icon icon={plusOutlined} />
-                  </div>
-                  <div className="quantity">1</div>
-                  <div>
-                    <Icon icon={minusIcon} />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </il>
+          {cartItems.map((item) => (
+            <li key={item.id}>
+              <CartItem
+                titlu={item.titlu}
+                categorie={item.categorie}
+                email={item.email}
+                telefon={item.telefon}
+                locatie={item.locatie}
+                descriere={item.descriere}
+                username={item.username}
+                pret={item.pret}
+                created_at={item.created_at}
+                quantity={item.quantity}
+                id={item.id}
+                totalPrice={item.totalPrice}
+                total={total}
+              />
+            </li>
+          ))}
         </ul>
       </div>
+      {/* ************************ */}
+      {/* Side Bar */}
+      {/* ************************ */}
       <div className={show}>
         <button className="close-btn" onClick={close}>
           <Icon icon={heavyMultiplicationX} />
         </button>
         <ul>
-          <li className="list-element">
+          <li className="list-element" onClick={close}>
             <Link to="/Jucarii" className="decoration">
               <div className="parent">
                 <div>Jucarii</div>{" "}
@@ -125,7 +138,7 @@ const SubNavbar = () => {
               </div>
             </Link>
           </li>
-          <li className="list-element">
+          <li className="list-element" onClick={close}>
             <Link to="/Natura" className="decoration">
               <div className="parent">
                 <div>Natura</div>{" "}
@@ -138,7 +151,7 @@ const SubNavbar = () => {
               </div>
             </Link>
           </li>
-          <li className="list-element">
+          <li className="list-element" onClick={close}>
             <Link to="/Papuci" className="decoration">
               <div className="parent">
                 <div>Papuci</div>
@@ -151,7 +164,7 @@ const SubNavbar = () => {
               </div>{" "}
             </Link>
           </li>
-          <li className="list-element">
+          <li className="list-element" onClick={close}>
             <Link to="/Tehnologie" className="decoration">
               <div className="parent">
                 <div>Tehnologie</div>{" "}
@@ -164,7 +177,7 @@ const SubNavbar = () => {
               </div>
             </Link>
           </li>
-          <li className="list-element">
+          <li className="list-element" onClick={close}>
             <Link to="/Ceasuri" className="decoration">
               <div className="parent">
                 <div>Ceasuri</div>{" "}
@@ -177,8 +190,8 @@ const SubNavbar = () => {
               </div>
             </Link>
           </li>
-          <li className="list-element">
-            <Link to="/Pentru Acasa" className="decoration">
+          <li className="list-element" onClick={close}>
+            <Link to="/PentruAcasa" className="decoration">
               <div className="parent">
                 <div>Pentru Acasa</div>{" "}
                 <div>
@@ -190,7 +203,7 @@ const SubNavbar = () => {
               </div>
             </Link>
           </li>
-          <li className="list-element">
+          <li className="list-element" onClick={close}>
             <Link to="/Imbracaminte" className="decoration">
               <div className="parent">
                 <div>Imbracaminte</div>{" "}
@@ -203,7 +216,7 @@ const SubNavbar = () => {
               </div>
             </Link>
           </li>
-          <li className="list-element">
+          <li className="list-element" onClick={close}>
             <Link to="/Arta" className="decoration">
               <div className="parent">
                 <div>Arta</div>
@@ -216,7 +229,7 @@ const SubNavbar = () => {
               </div>
             </Link>
           </li>
-          <li className="list-element">
+          <li className="list-element" onClick={close}>
             <Link to="/Altele" className="decoration">
               <div className="parent">
                 <div>Altele</div>{" "}

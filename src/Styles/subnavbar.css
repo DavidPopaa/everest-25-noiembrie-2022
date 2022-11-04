@@ -1,148 +1,91 @@
-.sub-navbar {
-  margin-left: auto;
-  margin-right: auto;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  background-color: #1282a2;
-  width: 95vw;
-  height: 3rem;
+.sub-container {
+  width: 85%;
+  height: 45px;
+  background-color: rgb(255, 255, 255);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 10px 10px 90px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  top: 80px;
+  margin-left: 7.5%;
+  margin-right: 7.5%;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+  z-index: 99;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
-#auth-btn {
-  width: 12vw;
-  height: 3.5vh;
-  background-color: #d9d9d9;
-  color: #000000d1;
-  border-radius: 100px;
-  border: none;
-  font-size: 0.9em;
-}
-.cart-icon {
-  color: #ffffff;
+.sub-menu{
   font-size: 2rem;
-  margin-right: 2.5rem;
-  cursor: pointer;
 }
-.rigth-ceva {
+.sub-right{
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
-  width: 13rem;
-  height: 7vh;
-  margin-right: 10px;
+  width: 200px;
 }
-.subnavbar-logout-button{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.sub-cart{
+  font-size: 2rem;
 }
-.menu {
-  color: #ffffff;
-  font-size: 2.2rem;
-  margin-left: 1rem;
-  cursor: pointer;
-}
-.show {
-  text-decoration: none;
-  background-color: red;
+
+.unhide {
   position: absolute;
+  top: 0;
   left: 0;
-}
-.full {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.562);
-  position: fixed;
-  top: 0;
-  right: 0;
-  visibility: hidden;
-  z-index: -100;
-}
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-.close_button {
-  margin-top: 10px;
-  margin-left: 10px;
-}
-.decoration {
-  text-decoration: none;
-  color: #000000;
-}
-.present {
-  visibility: visible !important;
-  z-index: 100 !important;
-  animation: swing-in-right-fwd 1s cubic-bezier(0.175, 0.885, 0.32, 1) both;
-}
-.cart {
-  width: 400px;
-  height: 100%;
-  position: fixed;
-  visibility: hidden;
-  right: 0;
-  top: 0;
+  width: 20vw;
+  height: 100vh;
   background-color: #107ad7;
-  z-index: -100;
+  flex-direction: column;
+  animation: swing-in-left-fwd 1s cubic-bezier(0.175, 0.885, 0.32, 1) both;
+  z-index: 100;
+  color: #ffffff;
 }
-.product_container {
-  width: 80%;
-  height: 20%;
-  background-color: #ffffff;
-  border-radius: 20px;
-  padding: 1vw;
-  display: flex;
+
+.list-element {
+  margin: 6vh;
+  margin-left: 0;
+  list-style: none;
 }
-.product_image {
-  width: 100px;
-  height: 100px;
-  background-color: #000000;
-  border-radius: 10px;
-  background-image: url(../Images/categorii-arta.jpg);
-  background-size: cover;
-}
-.product_quantity {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 70px;
-  height: 50px;
-}
-.product_sub_container {
-  margin-left: 20px;
-}
-.product_name {
-  text-transform: capitalize;
-}
-.logout-btn-div{
+
+.hide {
   position: absolute;
-  right: 4vw;
-  border-radius: 20px;
+  right: 100vw;
+}
+
+.visibel {
+  visibility: visible;
+  z-index: 99;
+}
+
+.parent {
+  width: 15vw;
+  background-color: #ffffff;
+  height: 5vh;
   color: black;
-}
-.logout-btn{
-  width: 100px;
-  height: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-decoration: none;
   border-radius: 20px;
-  border: none;
-  
-  font-weight:700;
-  font-size: 0.8rem;
 }
 
+.arrow-icon {
+  font-size: 1.5rem;
+  color: #034078;
+}
 
-@keyframes swing-in-right-fwd {
+@keyframes swing-in-left-fwd {
   0% {
-    transform: rotateY(-100deg);
-    transform-origin: right;
+    transform: rotateY(100deg);
+    transform-origin: left;
     opacity: 0;
   }
+
   100% {
     transform: rotateY(0);
-    transform-origin: right;
+    transform-origin: left;
     opacity: 1;
   }
 }

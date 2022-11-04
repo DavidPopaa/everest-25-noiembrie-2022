@@ -1,16 +1,10 @@
 import React from "react";
 import "../Styles/contact.css";
-import img from "../Images/Screenshot_2022-10-23_123824-removebg-preview.png";
+
+
 function Contact() {
   return (
     <div className="contact-container">
-      <div className="contact-full">
-        <img
-          src={img}
-          alt="logo"
-          className="contact-logo"
-        />
-      </div>
       <div className="contact-title">Contactează-ne</div>
       <div className="contact-forms">
         {/* <div className="contact-forms-name"> */}
