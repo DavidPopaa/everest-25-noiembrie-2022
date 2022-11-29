@@ -1,11 +1,9 @@
 import React from "react";
 import "../Styles/about.css";
-
 const About = () => {
     return (
       <div className="about-container">
         <div className="about-title">Despre</div>
-        
         <div className="about-text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec
           bibendum odio, eget venenatis lorem. Donec ac condimentum enim. Sed
@@ -39,5 +37,4 @@ const About = () => {
       </div>
     );
 };
-
 export default About;

@@ -3,8 +3,10 @@ import { useDispatch } from 'react-redux';
 import "../Styles/subnavbar.css";
 import { cartActions } from './cart';
 import formatDistanceToNow from "date-fns/formatDistanceToNow";
-
-function CartItem({ titlu, categorie, email, telefon, locatie, descriere, username, pret, created_at, quantity, id, totalPrice, total}) {
+import "../Styles/cartitem.css"
+import { Icon } from "@iconify/react";
+function CartItem({ titlu, categorie, email, telefon, locatie, descriere, username, pret, created_at, quantity, id, totalPrice, total, 
+    asigned_users ,poza, unitate}) {
     const dispatch = useDispatch()
     const incrementCartItem = () => {
         dispatch(cartActions.addToCart({
@@ -17,8 +19,10 @@ function CartItem({ titlu, categorie, email, telefon, locatie, descriere, userna
             username,
             created_at,
             pret,
-            id
-            
+            id,
+            asigned_users,
+            poza,
+            unitate
         }))
     }
     const decrementCartItem = () => {
@@ -26,24 +30,32 @@ function CartItem({ titlu, categorie, email, telefon, locatie, descriere, userna
             id
         }))
     }
-  return ( 
-    <div>
-      <h6>Titlu:  {titlu}</h6>
-      <h6>Categorie:  {categorie}</h6>
-      <h6>Email:  {email}</h6>
-      <h6>Telefon:  {telefon}</h6>
-      <h6>Locatie:  {locatie}</h6>
-      <h6>Descriere:  {descriere}</h6>
-      <h6>Username:  {username}</h6>
-      <h6>Pret:  {pret}</h6>
-      <h6>Created:  {formatDistanceToNow(new Date(created_at), {addSuffix: true})}</h6>
-      <h6>quantity:  {quantity}</h6>
-      <h6>Total Pret:  {totalPrice}</h6>
-      <button onClick={incrementCartItem}>Increment</button>
-      <button onClick={decrementCartItem}>Decrement</button>
-      <h1>TOTAL: {total}</h1>
+  return (
+    <div className="cart-container">
+      <img className="cart-img" src={poza} alt="ceva" />
+      <div className='cart-description'>
+        <div className="cart-info">Titlu: {titlu}</div>
+        <div className="cart-info">Categorie: {categorie}</div>
+        <div className="cart-info">Pret: {pret}</div>
+        <div className="cart-info">Postat de: {username}</div>
+      </div>
+      <div className="cart-info cart-unity">Pret unitate: {unitate}</div>
+      <div className="cart-footer">
+        <div>
+          {" "}
+          {formatDistanceToNow(new Date(created_at), { addSuffix: true })}
+        </div>
+        <div className="cart-quantity">
+          <div onClick={decrementCartItem} className="cart-inc">
+            <Icon icon="ic:baseline-minus" />
+          </div>
+          <div> {quantity}</div>
+          <div onClick={incrementCartItem} className="cart-dec">
+            <Icon icon="ic:baseline-plus" />
+          </div>
+        </div>
+      </div>
     </div>
-   );
+  );
 }
-// className='product-containe'
 export default CartItem;

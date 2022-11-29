@@ -1,95 +1,105 @@
 .sing {
-  background-color: bisque;
+  background-color: #f0f0f0;
   width: 100%;
   height: 100vh;
   animation: color-change-2x 2s linear infinite alternate both;
-  z-index: -1;
   display: grid;
   place-items: center;
 }
 .form {
-  background-image: linear-gradient(
-    92.17deg,
-    rgba(255, 255, 255, 0.4) 5.74%,
-    rgba(255, 255, 255, 0.1) 68.43%
-  );
   height: 30rem;
   width: 35rem;
   border-radius: 20px;
   box-sizing: border-box;
-  border: #0000003d 2px solid;
+  background-color: #ffffff;
+  box-shadow: 10px 10px 90px rgba(0, 0, 0, 0.25);
 }
 .form-title {
-  font-size: 3rem;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.form-input-container {
+  width: 204px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 10px;
-}
-.one {
-  margin-bottom: 20px;
-}
-.two {
-  margin-bottom: 20px;
-}
-.three {
-  margin-left: 1vw;
-}
-.form-inputs {
-  margin-top: 20px;
-  width: 35rem;
-  display: grid;
-  justify-content: center;
-  margin-bottom: 30px;
-}
-
-.form-button {
-  border-radius: 100px;
-  width: 150px;
-  height: 35px;
-  background-color: rgba(255, 255, 255, 0.573);
-  border: none;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-.form-button:hover{
-  border: 2px solid black;
-  background-color: #00000000;
-animation: contact-transition .5s ease-in both;
 }
 .form-input {
-  border-radius: 100px;
-  background-color: rgba(255, 255, 255, 0.573);
-  width: 12rem;
-  height: 2rem;
+  width: 200px;
+  height: 25px;
   border: none;
-  border-bottom: 2px solid black;
+  border: 2px solid rgb(200, 200, 200);
+  border-radius: 5px;
+  margin-top: 12px;
+  background: none;
+  font-size: 1rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  transform: translateY(1rem);
+  transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form-input:focus{
+.disappear {
+  background-color: #ffffff;
+}
+.form-input:focus {
   outline: none;
-
+  border: 2px solid #326be5;
+  background-color: #ffffff;
 }
-.form-password,
-.form-username {
-  opacity: 50%;
-  margin-left: 1.5vh;
+.one,
+.two,
+.three,
+.four {
+  position: relative;
 }
-.form-bars {
-  height: 60vh;
-  width: 100%;
-  z-index: -150;
+.form-labels {
   position: absolute;
-  top: 0;
-  background-color: #b22cff;
-  animation: color-change-2x 2s linear infinite alternate both;
+  left: 19px;
+  color: rgb(200, 200, 200);
+  pointer-events: none;
+  transform: translateY(2.2rem);
+  transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form-button:focus {
-  box-shadow: inset 0px 0px 21px -9px #000000;
-}
-.four{
-  margin-left: auto;
+.form-button {
+  width: 140px;
+  height: 35px;
+  border-radius: 10px;
+  border: none;
+  background-color: #326be5;
+  border: 3px solid #326be5;
+  font-size: 1.2rem;
+  color: #f0f0f0;
+  display: grid;
+  place-content: center;
   margin-right: auto;
+  margin-left: auto;
+  margin-top: 30px;
+  font-weight: 600;
+}
+.form-button:hover {
+  background-color: #00000000;
+  border: 3px solid #326be5;
+  color: rgb(13, 13, 13);
+}
+.form-err {
+  color: red;
+  font-weight: 600;
+  width: 100%;
+  display: flex;
+  justify-content: center;
   margin-top: 10px;
-  
+}
+.six {
+  margin-left: auto;
+  margin-left: auto;
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.form-link-sing {
+  color: rgb(13, 13, 13);
 }
 .form-bar-container {
   width: 35rem;
@@ -130,12 +140,9 @@ animation: contact-transition .5s ease-in both;
 .form-links-container {
   width: 35rem;
 }
-
-@keyframes color-change-2x {
-  0% {
-    background: #19dcea;
-  }
-  100% {
-    background: #b22cff;
+@media screen and (max-width: 767px) {
+  .form{
+    width: 100%;
+    border-radius: 0;
   }
 }

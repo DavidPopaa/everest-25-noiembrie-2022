@@ -1,15 +1,7 @@
 import React,{ useState } from "react";
-import "../Styles/sell-product.css";
 import { useGetAuthContex } from '../hooks/useGetAuthContex';
-// import axios from 'axios';
-// import { Navigate } from "react-router-dom";
-
-
 function SellProduct() {
   const { user } = useGetAuthContex()
-  // function sleep(ms) {
-  //   return new Promise(resolve => setTimeout(resolve, ms));
-  // }
   const [titlu, setTitlu] = useState('')
   const [categorie, setCategorie] = useState('')
   const [testImage, setPoza] = useState('')
@@ -18,7 +10,6 @@ function SellProduct() {
   const [descriere, setDescriere] = useState('')
   const [pret, setPret] = useState('')
   const [locatie, setLocatie] = useState('')
-
   let formData = new FormData()
   const handleImage = (e) => {
     setPoza(e.target.files[0])
@@ -35,31 +26,18 @@ function SellProduct() {
     formData.append('locatie', locatie)
     formData.append('username', user.username)
     
-    // await axios.post('/api/sell/img', formData)
-    // .then(() => console.log('posted from react', {titlu, categorie, testImage, email, telefon, descriere, pret, locatie}))
-    // .catch((error) => console.log(error))
-    // }catch(error) {
-    //   console.log(error)
-    // }
-    // console.log('posted from react')
-    // return 
-    // console.log('waiting...')
-    
-    // console.log('done')
     await fetch('/api/sell/img', {
       method: 'POST',
       body: formData,
     })
     .then(() => console.log('posted from react'))
     .catch((error) => console.log(error))
-
   }
   return (
     <div className="sell-container">
       <div className="form-bars"></div>
       <div className="sell-form">
         <div className="sell-title">Vinde cu Everest</div>
-        {/* <form> */}
           <div className="sell-arrange">
             <div>
               <div>Titlul postări</div>
@@ -83,11 +61,10 @@ function SellProduct() {
               </select>
             </div>
           </div>
-          <div className="sell-arrange">
-            
+          <div className="sell-arrange-special">
             <div>
-              {/* <div>Imagine</div> */}
               <div className="sell-image-square"></div>
+              <label for="sell-uploader" className="sell-btn">Alege</label>
               <input type="file" id="sell-uploader" required onChange={handleImage}></input>
             </div>
             <div className="sell-aside">
@@ -130,10 +107,8 @@ function SellProduct() {
               <button className="sell-button" onClick={handleSellProduct}>Publicați</button>
             </div>
           </div>
-        {/* </form> */}
       </div>
     </div>
   );
 }
-
 export default SellProduct;

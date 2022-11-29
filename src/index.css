@@ -15,3 +15,29 @@ code {
 .dec{
   text-decoration: none;
 }
+.visibel {
+  visibility: visible !important;
+}
+.full {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.44);
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  z-index: 100;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px grey;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(190, 190, 190);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(170, 170, 170);
+}
